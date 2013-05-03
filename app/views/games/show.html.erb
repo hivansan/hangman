@@ -1,0 +1,25 @@
+<h1>Game Number: <%= @game.id %></h1>
+<%= flash[:notice] %>
+<table>
+  <tr>
+    <td><%= @current_word.split(//).join(" ") %> </td>
+  </tr>
+  <tr>
+    <td><%= "Guesses:" +  @game.guesses %></td>
+  </tr>
+  <tr>
+    <td>
+      <%= form_for @game, :url => {:action => "update"} do |f| %>
+          <%= f.label "New guess:" %>
+          <%= f.text_field :guesses, :value => "" %>
+          <%= f.submit "Submit Guess" %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<% if @game.finished? %>
+    <p>You Win!</p>
+<% end %>
+
+<%= link_to 'Back', games_path %>
