@@ -6,6 +6,7 @@ CREATE TABLE games (
                 created_at DATETIME NOT NULL,
                 updated_at DATETIME NOT NULL,
                 name VARCHAR(255),
+                misses INT DEFAULT 0 NOT NULL,
                 status VARCHAR(255),
                 PRIMARY KEY (id)
 );
@@ -15,5 +16,6 @@ CREATE TABLE words (
                 id INT AUTO_INCREMENT NOT NULL,
                 created_at DATETIME NOT NULL,
                 updated_at DATETIME NOT NULL,
+                word VARCHAR(255),
                 PRIMARY KEY (id)
 );
