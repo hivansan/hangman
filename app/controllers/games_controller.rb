@@ -52,7 +52,7 @@ class GamesController < ApplicationController
       end
 
       @game.update_attributes(:status => 'Won!') if win.join.match @game.word
-      @game.update_attributes(:status => 'Lose!') if @game.misses.to_i >= 3
+      @game.update_attributes(:status => 'Lose!') if @game.misses.to_i >= (10/@game.difficulty)
     else
       flash[:notice] = 'Only 1 letter at a time!'
     end

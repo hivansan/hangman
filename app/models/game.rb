@@ -6,6 +6,7 @@
 #  word       :string(255)
 #  guesses    :string(255)
 #  created_at :datetime         not null
+#  difficulty :integer          default(1), not null
 #  updated_at :datetime         not null
 #  name       :string(255)
 #  misses     :integer          default(0), not null
@@ -13,7 +14,7 @@
 #
 
 class Game < ActiveRecord::Base
-  attr_accessible :word, :guesses, :name, :status, :misses
+  attr_accessible :word, :guesses, :name, :status, :misses, :difficulty
   
   def finished?
     if status == 'Won!' || status == 'Lose!'

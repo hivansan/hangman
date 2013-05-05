@@ -15,6 +15,15 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  
+  <div class="field">
+    <%= f.radio_button :difficulty, '1', :checked => true %> 
+    <%= label :difficulty, 'Easy' %>
+    <%= f.radio_button :difficulty, '2', :checked => false %> 
+    <%= label :difficulty, 'Medium' %>
+    <%= f.radio_button :difficulty, '3', :checked => false %> 
+    <%= label :difficulty, 'Hard' %>
+  </div>
 
   <div class="actions">
     <%= f.submit 'Create Game', :class => 'btn btn-large'  %>

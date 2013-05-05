@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag 'custom' %>
 <%= stylesheet_link_tag 'bootstrap' %>
-<%= stylesheet_link_tag 'bootstrap.min' %>
 <div class="container">
   <h1>Hangman!</h1>
 
@@ -8,18 +7,37 @@
   <table class="table">
     <tr>
       <th>Game Number</th>
-      <th>Player Name</th>
-      <th>Status</th>
+      <th>Player</th>
+      <th>Result</th>
+      <th>Difficulty</th>
+      <th>Mistakes</th>
+      <th></th>
     </tr>
 
   <% @games.each do |game| %>
     <tr>
       <td><%= game.id %></td>
       <td><%= game.name %></td>
-      <td><%= game.status %></td>
-      <% unless game.finished? %>
-        <td><%= link_to 'Play!', game %></td>
-      <% end %>
+      <td>
+        <%= game.status %>
+        <% unless game.finished? %>
+          (<%= link_to 'Continue game', game %>)
+        <% else %>
+          (<%= link_to 'Review', game %>)
+        <% end %>
+      </td>
+      <td>
+        <% if game.difficulty == 1 %>
+          Easy
+        <% elsif game.difficulty == 2 %>
+          Medium
+        <% else %>
+          Hard
+        <% end %>
+      </td>
+      <td><%= game.misses %></td>
+      <td></td>
+      
     </tr>
   <% end %>
   </table>
