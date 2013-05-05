@@ -22,61 +22,70 @@
     <column id="COL4" populated="true" UUID="a3d4337e-9b0b-460e-9839-14e04abea138" autoIncrement="false" autoIncrementSequenceName="words_updated_at_seq" defaultValue="" name="updated_at" nullable="0" physicalName="updated_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
+    <column id="COL5" populated="true" UUID="88e6f020-9986-4979-b778-d52b265a90a6" autoIncrement="false" autoIncrementSequenceName="words_word_seq" defaultValue="" name="word" nullable="1" physicalName="word" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
     </folder>
     <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
     <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX5" populated="true" UUID="71eff458-ed62-4122-8eef-bd2e52092fd1" clustered="false" name="words_pk" physicalName="words_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC6" populated="true" UUID="321c8cf0-1ee3-401a-8e9c-21279fcf5e2f" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id" physicalName="id" />
+    <index id="IDX6" populated="true" UUID="71eff458-ed62-4122-8eef-bd2e52092fd1" clustered="false" name="words_pk" physicalName="words_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC7" populated="true" UUID="321c8cf0-1ee3-401a-8e9c-21279fcf5e2f" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
-  <table id="TAB7" populated="true" UUID="f35c1b0d-1f3d-4031-a924-15f35bc1d977" name="games" objectType="TABLE" physicalName="games" >
+  <table id="TAB8" populated="true" UUID="f35c1b0d-1f3d-4031-a924-15f35bc1d977" name="games" objectType="TABLE" physicalName="games" >
    <remarks></remarks>
-   <folder id="FOLTAB71" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL8" populated="true" UUID="013a4a94-0346-412b-8728-9ca308d806e8" autoIncrement="true" autoIncrementSequenceName="games_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL9" populated="true" UUID="013a4a94-0346-412b-8728-9ca308d806e8" autoIncrement="true" autoIncrementSequenceName="games_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL9" populated="true" UUID="d4499613-666d-4ba9-8cd4-8a1ecba208ad" autoIncrement="false" autoIncrementSequenceName="games_word_seq" defaultValue="" name="word" nullable="1" physicalName="word" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL10" populated="true" UUID="d4499613-666d-4ba9-8cd4-8a1ecba208ad" autoIncrement="false" autoIncrementSequenceName="games_word_seq" defaultValue="" name="word" nullable="1" physicalName="word" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL10" populated="true" UUID="39108d6c-97ea-4f2f-bcef-aa67f01a3b12" autoIncrement="false" autoIncrementSequenceName="games_guesses_seq" defaultValue="" name="guesses" nullable="1" physicalName="guesses" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL11" populated="true" UUID="39108d6c-97ea-4f2f-bcef-aa67f01a3b12" autoIncrement="false" autoIncrementSequenceName="games_guesses_seq" defaultValue="" name="guesses" nullable="1" physicalName="guesses" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL11" populated="true" UUID="c6ad229f-62df-4f7d-9924-6b34eca9ee3b" autoIncrement="false" autoIncrementSequenceName="games_created_at_seq" defaultValue="" name="created_at" nullable="0" physicalName="created_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL12" populated="true" UUID="c6ad229f-62df-4f7d-9924-6b34eca9ee3b" autoIncrement="false" autoIncrementSequenceName="games_created_at_seq" defaultValue="" name="created_at" nullable="0" physicalName="created_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL12" populated="true" UUID="ee1efb02-6898-42c3-b9a5-cf3e1b056757" autoIncrement="false" autoIncrementSequenceName="games_updated_at_seq" defaultValue="" name="updated_at" nullable="0" physicalName="updated_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+    <column id="COL13" populated="true" UUID="3cc0bd54-050c-4d37-be90-2ae35aae1d63" autoIncrement="false" autoIncrementSequenceName="games_difficulty_seq" defaultValue="1" name="difficulty" nullable="0" physicalName="difficulty" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL13" populated="true" UUID="a487fabc-8998-4fdf-8403-3394bb1e55c3" autoIncrement="false" autoIncrementSequenceName="games_name_seq" defaultValue="" name="name" nullable="1" physicalName="name" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL14" populated="true" UUID="ee1efb02-6898-42c3-b9a5-cf3e1b056757" autoIncrement="false" autoIncrementSequenceName="games_updated_at_seq" defaultValue="" name="updated_at" nullable="0" physicalName="updated_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL14" populated="true" UUID="a2397eee-4178-4d9e-bad1-e070ea740db8" autoIncrement="false" autoIncrementSequenceName="games_status_seq" defaultValue="" name="status" nullable="1" physicalName="status" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL15" populated="true" UUID="a487fabc-8998-4fdf-8403-3394bb1e55c3" autoIncrement="false" autoIncrementSequenceName="games_name_seq" defaultValue="" name="name" nullable="1" physicalName="name" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="3a9b1b2b-98ac-4f48-8342-551cb0b7c53f" autoIncrement="false" autoIncrementSequenceName="games_misses_seq" defaultValue="0" name="misses" nullable="0" physicalName="misses" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="a2397eee-4178-4d9e-bad1-e070ea740db8" autoIncrement="false" autoIncrementSequenceName="games_status_seq" defaultValue="" name="status" nullable="1" physicalName="status" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB73" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX15" populated="true" UUID="531966e0-a06f-4e57-bf28-ce075bc64610" clustered="false" name="games_pk" physicalName="games_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC16" populated="true" UUID="10ac4255-ce1e-4ee5-888c-8b14597c6a25" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="id" physicalName="id" />
+    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX18" populated="true" UUID="531966e0-a06f-4e57-bf28-ce075bc64610" clustered="false" name="games_pk" physicalName="games_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC19" populated="true" UUID="10ac4255-ce1e-4ee5-888c-8b14597c6a25" ascendingOrDescending="UNSPECIFIED" column-ref="COL9" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
   <relationships>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="289" y="212" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB7" x="603" y="208" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="603" y="208" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
