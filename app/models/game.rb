@@ -1,8 +1,22 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id         :integer          not null, primary key
+#  word       :string(255)
+#  guesses    :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  name       :string(255)
+#  misses     :integer          default(0), not null
+#  status     :string(255)
+#
+
 class Game < ActiveRecord::Base
-  attr_accessible :word, :guesses, :name, :status
+  attr_accessible :word, :guesses, :name, :status, :misses
   
   def finished?
-    if status == 'Won!'
+    if status == 'Won!' || status == 'Lose!'
       true
     end
   end

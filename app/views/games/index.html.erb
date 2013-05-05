@@ -1,24 +1,32 @@
-<h1>Hangman!</h1>
+<%= stylesheet_link_tag 'custom' %>
+<%= stylesheet_link_tag 'bootstrap' %>
+<%= stylesheet_link_tag 'bootstrap.min' %>
+<div class="container">
+  <h1>Hangman!</h1>
 
-<table>
-  <tr>
-    <th>Game Number</th>
-    <th>Player Name</th>
-    <th>Status</th>
-  </tr>
+  
+  <table class="table">
+    <tr>
+      <th>Game Number</th>
+      <th>Player Name</th>
+      <th>Status</th>
+    </tr>
 
-<% @games.each do |game| %>
-  <tr>
-    <td><%= game.id %></td>
-    <td><%= game.name %></td>
-    <td><%= game.status %></td>
-    <% unless game.finished? %>
-      <td><%= link_to 'Play!', game %></td>
-    <% end %>
-  </tr>
-<% end %>
-</table>
+  <% @games.each do |game| %>
+    <tr>
+      <td><%= game.id %></td>
+      <td><%= game.name %></td>
+      <td><%= game.status %></td>
+      <% unless game.finished? %>
+        <td><%= link_to 'Play!', game %></td>
+      <% end %>
+    </tr>
+  <% end %>
+  </table>
 
-<br />
+  <br />
 
-<%= link_to 'New Game', new_game_path %>
+  <%= link_to 'New Game', new_game_path %>
+
+
+</div>
