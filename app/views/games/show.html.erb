@@ -1,41 +1,20 @@
 <%= stylesheet_link_tag 'bootstrap' %>
+<%= stylesheet_link_tag 'new_game' %>
 
 <div class="container">
 
   <div class="row">
     <div class="span6">
-      <h1>Game Number: <%= @game.id %></h1>
-      
+      <h3>Game Number: <%= @game.id %></h3>
       <%= flash[:notice] %>
-      
-      <table>
-        <tr>
-          <td><%= @current_word.split(//).join(" ") %> </td>
-        </tr>
-        <tr>
-          <td><%= "Guesses:" +  @game.guesses %></td>
-        </tr>
-        <% if @game.status == 'In Progress' %>
-          <tr>
-            <td>
-              <%= form_for @game, :url => {:action => "update"} do |f| %>
-                <%= f.label "New guess:" %>
-                <%= f.text_field :guesses, :value => "" %>
-                <%= f.submit "Submit Guess" %>
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-      </table>
-
+      <h1><%= @current_word.split(//).join(" ") %></h1>
+      <%= "Guesses:" +  @game.guesses %>
       <% if @game.status == 'Won!' || @game.status == 'Lose!' %>
         <p>
           <%= "You " + @game.status%>
         </p>
       <% end %>
-
       <%= link_to 'Back', games_path %>
-      
     </div>
     
     <div class="span5">
@@ -45,4 +24,14 @@
     </div>
     
   </div>
+
+</div>
+
+<div class="container">
+  <% if @game.status == 'In Progress' %>
+    <%= form_for @game, :url => {:action => "update"} do |f| %>
+      <%= f.label "New guess:" %>
+      <%= f.text_field :guesses, :value => "" %>
+    <% end %>
+  <% end %>
 </div>
