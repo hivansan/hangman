@@ -37,28 +37,28 @@
     </p>
   <% end %>
     <% if @game.difficulty == 1 %>
-      <% case @game.misses when 1 %><%= image_tag("1.png") %>
-      <% when 2 %><%= image_tag("2.png") %>
-      <% when 3 %><%= image_tag("3.png") %>
-      <% when 4 %><%= image_tag("4.png") %>
-      <% when 5 %><%= image_tag("5.png") %>
-      <% when 6 %><%= image_tag("6.png") %>
-      <% when 7 %><%= image_tag("7.png") %>
-      <% when 8 %><%= image_tag("8.png") %>
-      <% when 9 %><%= image_tag("9.png") %>
-      <% when 10 %><%= image_tag("10.png") %>
+      <% case @game.misses when 1 %><%= image_tag("hangman1.png") %>
+      <% when 2 %><%= image_tag("hangman2.png") %>
+      <% when 3 %><%= image_tag("hangman3.png") %>
+      <% when 4 %><%= image_tag("hangman4.png") %>
+      <% when 5 %><%= image_tag("hangman5.png") %>
+      <% when 6 %><%= image_tag("hangman6.png") %>
+      <% when 7 %><%= image_tag("hangman7.png") %>
+      <% when 8 %><%= image_tag("hangman8.png") %>
+      <% when 9 %><%= image_tag("hangman9.png") %>
+      <% when 10 %><%= image_tag("hangman10.png") %>
       <% end %>
     <% elsif @game.difficulty == 2 %>
-      <% case @game.misses when 1 %><%= image_tag("1.png") %>
-      <% when 2 %><%= image_tag("3.png") %>
-      <% when 3 %><%= image_tag("5.png") %>
-      <% when 4 %><%= image_tag("8.png") %>
-      <% when 5 %><%= image_tag("10.png") %>
+      <% case @game.misses when 1 %><%= image_tag("hangman1.png") %>
+      <% when 2 %><%= image_tag("hangman3.png") %>
+      <% when 3 %><%= image_tag("hangman5.png") %>
+      <% when 4 %><%= image_tag("hangman8.png") %>
+      <% when 5 %><%= image_tag("hangman10.png") %>
       <% end %>
     <% else %>
-      <% case @game.misses when 1 %><%= image_tag("1.png") %>
-      <% when 2 %><%= image_tag("5.png") %>
-      <% when 3 %><%= image_tag("10.png") %>
+      <% case @game.misses when 1 %><%= image_tag("hangman1.png") %>
+      <% when 2 %><%= image_tag("hangman5.png") %>
+      <% when 3 %><%= image_tag("hangman10.png") %>
       <% end %>
     <% end %>
   </div>
