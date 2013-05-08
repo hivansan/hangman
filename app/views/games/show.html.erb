@@ -9,29 +9,59 @@
       <%= flash[:notice] %>
       <h1><%= @current_word.split(//).join(" ") %></h1>
       <%= "Guesses:" +  @game.guesses %>
-      <% if @game.status == 'Won!' || @game.status == 'Lose!' %>
-        <p>
-          <%= "You " + @game.status%>
-        </p>
-      <% end %>
-      <%= link_to 'Back', games_path %>
+      
     </div>
     
-    <div class="span5">
+    <div class="span6">
       <h1>
-        Mistakes: <%= @game.misses %>
+        Remaining attempts: <%= (10/@game.difficulty) - @game.misses %>
       </h1>
     </div>
     
   </div>
 
-</div>
-
-<div class="container">
   <% if @game.status == 'In Progress' %>
     <%= form_for @game, :url => {:action => "update"} do |f| %>
       <%= f.label "New guess:" %>
       <%= f.text_field :guesses, :value => "" %>
     <% end %>
   <% end %>
+
+
+  <div class="image_hangman">
+  <% if @game.status == 'Won!' || @game.status == 'Lose!' %>
+    <p>
+      <h2>
+        <%= "You " + @game.status%>
+      </h2>
+    </p>
+  <% end %>
+    <% if @game.difficulty == 1 %>
+      <% case @game.misses when 1 %><%= image_tag("1.png") %>
+      <% when 2 %><%= image_tag("2.png") %>
+      <% when 3 %><%= image_tag("3.png") %>
+      <% when 4 %><%= image_tag("4.png") %>
+      <% when 5 %><%= image_tag("5.png") %>
+      <% when 6 %><%= image_tag("6.png") %>
+      <% when 7 %><%= image_tag("7.png") %>
+      <% when 8 %><%= image_tag("8.png") %>
+      <% when 9 %><%= image_tag("9.png") %>
+      <% when 10 %><%= image_tag("10.png") %>
+      <% end %>
+    <% elsif @game.difficulty == 2 %>
+      <% case @game.misses when 1 %><%= image_tag("1.png") %>
+      <% when 2 %><%= image_tag("3.png") %>
+      <% when 3 %><%= image_tag("5.png") %>
+      <% when 4 %><%= image_tag("8.png") %>
+      <% when 5 %><%= image_tag("10.png") %>
+      <% end %>
+    <% else %>
+      <% case @game.misses when 1 %><%= image_tag("1.png") %>
+      <% when 2 %><%= image_tag("5.png") %>
+      <% when 3 %><%= image_tag("10.png") %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to 'Back', games_path %>
 </div>
